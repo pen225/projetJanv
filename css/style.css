@@ -1,16 +1,46 @@
+/* general */
+.titreRubrique{
+    margin:40px auto 0px auto;
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    border-radius: 10px;
+}
+/* .titreRubrique h1{
+    
+} */
+.navbar{
+    height: 100px;
+    box-shadow: 0px 0px 4px grey;
+}
+.navbar-brand{
+    margin-right: 100px;
+}
+ul li{
+    margin-right: 10px;
+}
+ul a{
+    font-size: 20px;
+}
 .carousel-inner{
-    height: 400px;
+    height: 500px;
 }
 .carousel-inner img{
     height: 600px;
 }
 
-.img-fluid{
-    max-width: 100%;
-    height: auto;
-}
 .conf_j1{
     font-size: 40px;
     font-weight: bolder;
-
 }
+.prdreRdv{
+    margin-top: 20px;
+}
+
+/* .infoCovid{
+    
+} */
