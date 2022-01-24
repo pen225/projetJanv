@@ -1,0 +1,16 @@
+.carousel-inner{
+    height: 400px;
+}
+.carousel-inner img{
+    height: 600px;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.conf_j1{
+    font-size: 40px;
+    font-weight: bolder;
+
+}
