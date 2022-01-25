@@ -10,6 +10,9 @@
     color: white;
     border-radius: 10px;
 }
+body{
+    background: url('../images/virtual-health-article-hero-banner-d.jpg');
+}
 /* .titreRubrique h1{
     
 } */
@@ -26,12 +29,7 @@ ul li{
 ul a{
     font-size: 20px;
 }
-.carousel-inner{
-    height: 500px;
-}
-.carousel-inner img{
-    height: 600px;
-}
+
 
 .conf_j1{
     font-size: 40px;
@@ -39,16 +37,9 @@ ul a{
 }
 .prdreRdv{
     margin-top: 20px;
-}
-
-/* .infoCovid{
-    
-} */
-
-/* galerie */
-.galerie{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+}
+form{
+    width: 500px;
 }
