@@ -52,8 +52,36 @@ formRdv.addEventListener('submit', (e) =>{
             patientsGeneral.push(patient);
             localStorage.setItem("patientGeneral",JSON.stringify(patientsGeneral));
         }
-    }else {
-        alert("Vous avez pas choisi le Medecin Generaliste");
+    }else if(selectService.value == 'ophtamologie') {
+        let patientsOphtamologie = JSON.parse(localStorage.getItem("patientOphtamologie"));
+        if (patientsOphtamologie) {
+            patientsOphtamologie.push(patient);
+            localStorage.setItem("patientOphtamologie",JSON.stringify(patientsOphtamologie));
+        }else{
+            patientsOphtamologie = [];
+            patientsOphtamologie.push(patient);
+            localStorage.setItem("patientOphtamologie",JSON.stringify(patientsOphtamologie));
+        }
+    }else if (selectService.value == 'dermatologie') {
+        let patientsDermatologie = JSON.parse(localStorage.getItem("patientDermatologie"));
+        if (patientsDermatologie) {
+            patientsDermatologie.push(patient);
+            localStorage.setItem("patientDermatologie",JSON.stringify(patientsDermatologie));
+        }else{
+            patientsDermatologie = [];
+            patientsDermatologie.push(patient);
+            localStorage.setItem("patientDermatologie",JSON.stringify(patientsDermatologie));
+        }
+    }else if (selectService.value == 'chirugie') {
+        let patientsChirugie = JSON.parse(localStorage.getItem("patientChirugie"));
+        if (patientsChirugie) {
+            patientsChirugie.push(patient);
+            localStorage.setItem("patientChirugie",JSON.stringify(patientsChirugie));
+        }else{
+            patientsChirugie = [];
+            patientsChirugie.push(patient);
+            localStorage.setItem("patientChirugie",JSON.stringify(patientsChirugie));
+        }
     }
     
 })

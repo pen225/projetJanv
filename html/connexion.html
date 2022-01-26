@@ -48,8 +48,13 @@
     <div class="container prdreRdv">
       <form class="row g-3">
         <div class="col-md-6">
-          <label for="nom" class="form-label"><strong>Nom</strong></label>
-          <input type="text" class="form-control" id="nom" aria-label="First name">
+          <label for="service" class="form-label"><strong>Choisir un service</strong></label>
+          <select id="service" class="form-select">
+            <option value="generaliste" selected>Généraliste</option>
+            <option value="ophtamologie">Ophtamologie</option>
+            <option value="dermatologie">Dermatologie</option>
+            <option value="chirugie">Chirugie</option>
+          </select>
         </div>
         <div class="col-md-6">
           <label for="pass" class="form-label"><strong>Mot de passe</strong></label>

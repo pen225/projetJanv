@@ -1,18 +1,22 @@
-let inputName = document.getElementById('nom');
+let service = document.getElementById('service');
 let inputPassword = document.getElementById('pass');
 const form = document.querySelector('form');
 
 
-console.log(inputName, inputPassword);
+console.log(service, inputPassword);
 
 
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
-    inputName = inputName.value;
+    service = service.value;
     inputPassword = +inputPassword.value;
-    if (inputName == 'pen' && inputPassword == 1235) {
+    
+    if (service == 'generaliste' && inputPassword == 1235) {
         console.log("Bonjour penuel Essoh");
+        location.assign('http://127.0.0.1:5500/html/general.html');
+
     }else{
-        console.log("Veuillez contactez le service informatique");
+        alert("Veuillez contacter le service informatique");
+        location.reload('http://127.0.0.1:5500/html/connexion.html?#!');
     }
 });
