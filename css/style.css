@@ -47,8 +47,25 @@ ul a{
 
 /* galerie */
 .galerie{
+    width: 1000px;
+    display: flex;
+    align-items: center;
+}
+.card{
+    margin: 20px 10px;
+}
+.fas{
+    color: rgba(128, 128, 128, 0.852);
+}
+.contentGalerie{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+}
+.slick-prev{
+    background: none;
+    border: none;
+}
+.slick-next{
+    background: none;
+    border: none;
 }

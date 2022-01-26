@@ -13,11 +13,11 @@ fetch("https://api.covid19api.com/summary")
 .then((response) => response.json())
 .then((data) => {
     const pays = data.Countries;
-    console.log(pays);
+    // console.log(pays);
     const tPays= [];
     for (let i = 0; i < pays.length; i++) {
         const element = pays[i];
-        console.log(element.TotalConfirmed);
+        // console.log(element.TotalConfirmed);
     }
 })
 
@@ -84,4 +84,57 @@ formRdv.addEventListener('submit', (e) =>{
         }
     }
     
+})
+
+// Slicke carousel
+  function chargeplay (){
+    $('.galerie').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      });
+      stylePrevAndNext();
+  }
+
+
+
+
+
+function stylePrevAndNext(){
+    let previousAll = document.querySelectorAll('.slick-prev');
+    let nextAll = document.querySelectorAll('.slick-next');
+    console.log(previousAll);
+
+    for (let i = 0; i < previousAll.length; i++) {
+        const element = previousAll[i];
+        // console.log(element);
+        element.innerHTML = `<i class="fas fa-arrow-circle-left"></i>`
+    }
+    for (let i = 0; i < nextAll.length; i++) {
+        const element = nextAll[i];
+        console.log(element);
+        element.innerHTML = `<i class="fas fa-arrow-circle-right"></i>`
+    }
+}
+
+
+fetch(`https://api.themoviedb.org/3/search/movie?api_key=7843f8d22a43911f15301ef8d76338ae&query=covid`)
+.then((response) => response.json())
+.then((data) => {
+    // console.log(data.results);
+    let dataElements = data.results;
+    for (let i = 0; i < dataElements.length; i++) {
+        const elements = dataElements[i];
+
+        // console.log(elements);
+        document.querySelector('.galerie').innerHTML += `
+        <div class="card col-lg-3 col-md-3" style="width: 18rem;">
+                <img src="https://image.tmdb.org/t/p/w500${elements.backdrop_path}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">${elements.title}</h5>
+                </div>
+        </div>
+        `;
+    }
+
+    chargeplay();
 })
