@@ -1,7 +1,6 @@
-let infoGeneral = JSON.parse(localStorage.getItem("patientGeneral"));
-console.log(infoGeneral);
-for (let i = 0; i < infoGeneral.length; i++) {
-    const element = infoGeneral[i];
+let patientsDermatologie = JSON.parse(localStorage.getItem("patientDermatologie"));
+for (let i = 0; i < patientsDermatologie.length; i++) {
+    const element = patientsDermatologie[i];
     console.log(element);
 
 

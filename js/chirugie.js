@@ -1,7 +1,6 @@
-let infoGeneral = JSON.parse(localStorage.getItem("patientGeneral"));
-console.log(infoGeneral);
-for (let i = 0; i < infoGeneral.length; i++) {
-    const element = infoGeneral[i];
+let patientsChirugie = JSON.parse(localStorage.getItem("patientChirugie"));
+for (let i = 0; i < patientsChirugie.length; i++) {
+    const element = patientsChirugie[i];
     console.log(element);
 
 
