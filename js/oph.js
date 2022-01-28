@@ -1,3 +1,4 @@
+
 let patientsOphtamologie = JSON.parse(localStorage.getItem("patientOphtamologie"));
 for (let i = 0; i < patientsOphtamologie.length; i++) {
     const element = patientsOphtamologie[i];
@@ -5,7 +6,7 @@ for (let i = 0; i < patientsOphtamologie.length; i++) {
 
 
     document.querySelector('tbody').innerHTML += `
-    <tr>
+    <tr >
     <td>${i+1}</td>
     <td>${element.nom}</td>
     <td>${element.prenom}</td>

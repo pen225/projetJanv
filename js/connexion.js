@@ -12,16 +12,16 @@ form.addEventListener('submit', (e) =>{
     inputPassword = +inputPassword.value;
     
     if (service == 'generaliste' && inputPassword == 1235) {
-        location.assign('http://127.0.0.1:5500/html/general.html');
+        location.assign('../html/general.html');
 
     }else if (service == 'ophtamologie' && inputPassword == 1235) {
-        location.assign('http://127.0.0.1:5500/html/ophtamologie.html');
+        location.assign('../html/ophtamologie.html');
     }else if (service == 'dermatologie' && inputPassword == 1235) {
-        location.assign('http://127.0.0.1:5500/html/dermato.html');
+        location.assign('../html/dermato.html');
     }else if (service == 'chirugie' && inputPassword == 1235) {
-        location.assign('http://127.0.0.1:5500/html/chirugie.html');
+        location.assign('../html/chirugie.html');
     }else{
         alert("Veuillez contacter le service informatique");
-        location.reload('http://127.0.0.1:5500/html/connexion.html?#!');
+        location.reload('../html/connexion.html?#!');
     }
 });
