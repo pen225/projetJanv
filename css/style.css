@@ -1,5 +1,5 @@
 /* general */
-.titreRubrique{
+/* .titreRubrique{
     margin:40px auto 0px auto;
     height: 100px;
     width: 500px;
@@ -9,7 +9,7 @@
     flex-direction: column;
     color: white;
     border-radius: 10px;
-}
+} */
 /* .titreRubrique h1{
     
 } */
@@ -30,7 +30,21 @@ ul a{
     height: 500px;
 }
 .carousel-inner img{
-    height: 600px;
+    height: 500px;
+}
+.carousel-caption h1{
+    font-size: 50px;
+    text-shadow: 1px 1px 3px #777;
+}
+.carousel-caption p{
+    font-size: 20px;
+    text-shadow: 1px 1px 3px #777;
+}
+.carousel-caption{
+    margin-bottom: 100px;
+    background: rgba(255, 255, 255, 0.342);
+    border-radius: 10px;
+    box-shadow: Opx 0px 4px #777;
 }
 
 .conf_j1{
@@ -41,9 +55,7 @@ ul a{
     margin-top: 20px;
 }
 
-/* .infoCovid{
-    
-} */
+
 
 /* galerie */
 .galerie{
@@ -68,4 +80,25 @@ ul a{
 .slick-next{
     background: none;
     border: none;
+}
+
+.contact{
+    cursor: pointer;
+}
+
+.infoCovid{
+    background: url('../images/informations_essentielles.jpg') no-repeat;
+    background-size: auto 100%;
+    height: 270px;
+    background-size: cover;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+.infoCovid h1{
+    color: white;
+    width: 200px;
+    margin-left: 20px;
+    font-size: 50px;
 }

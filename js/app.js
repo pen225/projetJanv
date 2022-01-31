@@ -1,25 +1,98 @@
-// fetch("https://coronavirusapifr.herokuapp.com/data/live/paris")
-// .then((response) => response.json())
-// .then((data) => console.log(data))
+// Partie covid
+let sub = document.getElementById('searchCovid');
+let input = document.getElementById('inputSearchCovid');
+let nameCountry = document.getElementById('nameCountry');
 
-
-let apikey = 'dd864602b809434c9b1a9b3a3c20192d';
-
-
-// fetch(`https://api.covidactnow.org/v2/states.timeseries.json?apiKey=${apikey}`)
-// .then((response) => response.json())
-// .then((data) => console.log(data))
+// Afficher les infos d'un pays
 fetch("https://api.covid19api.com/summary")
-.then((response) => response.json())
-.then((data) => {
-    const pays = data.Countries;
-    // console.log(pays);
-    const tPays= [];
-    for (let i = 0; i < pays.length; i++) {
-        const element = pays[i];
-        // console.log(element.TotalConfirmed);
-    }
+        .then((response) => response.json())
+        .then((data) => {
+        afficherCas(data)
+        // console.log(data);
+       
+    })
+// Fonction Afficher les cas
+
+function afficherCas(pen){
+    let country= pen.Countries;
+    console.log(country[45]);
+    document.querySelector('.afficheCas').innerHTML=`
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Nombre de cas confirmé</h5>
+      <h6 class="card-subtitle mb-2 text-muted">${NewConfirmed}</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Nombre de cas confirmé</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Nombre de cas confirmé</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+    
+    `;
+    
+}
+
+
+// Recherche
+sub.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    afficheInput = input.value;
+    console.log(afficheInput);
+
+    fetch("https://api.covid19api.com/countries")
+        .then((response) => response.json())
+        .then((data) => {
+        // affichePays(data)
+        // console.log(data);
+        for (const pays of data) {
+            console.log(pays.Country);
+            if (pays.Country = "Mali") {
+                console.log(pays.ISO2);
+            }
+
+            // break;
+        }
+
+
+    })
+
+
+
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let formRdv = document.getElementById('formulaireDeRdv');
 let selectService = document.querySelector('select');
@@ -89,7 +162,7 @@ formRdv.addEventListener('submit', (e) =>{
 // Slicke carousel
   function chargeplay (){
     $('.galerie').slick({
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
       });
       stylePrevAndNext();
@@ -127,7 +200,7 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=7843f8d22a43911f15301ef
 
         // console.log(elements);
         document.querySelector('.galerie').innerHTML += `
-        <div class="card col-lg-3 col-md-3" style="width: 18rem;">
+        <div class="card  style="width: 18rem;">
                 <img src="https://image.tmdb.org/t/p/w500${elements.backdrop_path}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">${elements.title}</h5>
@@ -138,3 +211,6 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=7843f8d22a43911f15301ef
 
     chargeplay();
 })
+
+
+
