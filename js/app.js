@@ -2,89 +2,57 @@
 let sub = document.getElementById('searchCovid');
 let input = document.getElementById('inputSearchCovid');
 let nameCountry = document.getElementById('nameCountry');
+let inputSearchCovid = document.getElementById('inputSearchCovid');
+let nombreCasConfirm = document.querySelector('.nombreCasConfirm');
+let nombrePatientDece = document.querySelector('.nombrePatientDece');
+let nombrePatientGuerrir = document.querySelector('.nombrePatientGuerrir');
 
-// Afficher les infos d'un pays
-fetch("https://api.covid19api.com/summary")
-        .then((response) => response.json())
-        .then((data) => {
-        afficherCas(data)
-        // console.log(data);
-       
-    })
-// Fonction Afficher les cas
-
-function afficherCas(pen){
-    let country= pen.Countries;
-    console.log(country[45]);
-    document.querySelector('.afficheCas').innerHTML=`
-    <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Nombre de cas confirmé</h5>
-      <h6 class="card-subtitle mb-2 text-muted">${NewConfirmed}</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Nombre de cas confirmé</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Nombre de cas confirmé</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-    
-    `;
-    
-}
 
 
 // Recherche
-sub.addEventListener('submit', (e) =>{
-    e.preventDefault();
-    afficheInput = input.value;
-    console.log(afficheInput);
-
-    fetch("https://api.covid19api.com/countries")
-        .then((response) => response.json())
-        .then((data) => {
-        // affichePays(data)
-        // console.log(data);
-        for (const pays of data) {
-            console.log(pays.Country);
-            if (pays.Country = "Mali") {
-                console.log(pays.ISO2);
-            }
-
-            // break;
-        }
-
-
-    })
-
-
-
+fetch("https://api.covid19api.com/summary")
+    .then((response) => response.json())
+    .then((data) => {
+    let country = data.Countries;
+    
+    for (let i = 0; i < country.length; i++) {
+        const element = country[i];
+        // console.log(element.Country);
+        document.getElementById('inputSearchCovid').innerHTML += `<option value="${element.Country}">${element.Country}</option>`;
+    }
+    
 })
 
 
+// Afficher les infos d'un pays
+fetch("https://disease.sh/v3/covid-19/countries/c%C3%B4te%20d%27ivoire?strict=true")
+        .then((response) => response.json())
+        .then((data) => {
+        console.log(data);
 
+        nameCountry.innerHTML=`${data.country}`;
+        nombreCasConfirm.innerHTML= `${data.cases}`;
+        nombrePatientDece.innerHTML= `${data.deaths}`;
+        nombrePatientGuerrir.innerHTML= `${data.recovered}`;
+})
 
+// AddeventListener
+sub.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    console.log(inputSearchCovid.value);
 
+    fetch(`https://disease.sh/v3/covid-19/countries/${inputSearchCovid.value}?strict=true`)
+        .then((response) => response.json())
+        .then((data) => {
+        console.log(data);
 
-
-
-
+        nameCountry.innerHTML=`${data.country}`;
+        nombreCasConfirm.innerHTML= `${data.cases}`;
+        nombrePatientDece.innerHTML= `${data.deaths}`;
+        nombrePatientGuerrir.innerHTML= `${data.recovered}`;
+    })
+       })
+// Fin patie
 
 
 
@@ -113,7 +81,7 @@ formRdv.addEventListener('submit', (e) =>{
         mail: mail.value,
         telephone: tel.value,
         address: address.value,
-        annivairsaire: anniv.value
+        anniversaire: anniv.value
     }
     if (selectService.value == 'generaliste') {
         let patientsGeneral = JSON.parse(localStorage.getItem("patientGeneral"));

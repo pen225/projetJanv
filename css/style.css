@@ -1,18 +1,4 @@
-/* general */
-/* .titreRubrique{
-    margin:40px auto 0px auto;
-    height: 100px;
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-    border-radius: 10px;
-} */
-/* .titreRubrique h1{
-    
-} */
+
 .navbar{
     height: 100px;
     box-shadow: 0px 0px 4px grey;

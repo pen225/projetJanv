@@ -99,15 +99,35 @@
           </div>
         </div>
 
-        <nav class="navbar navbar-light bg-light mt-6">
-          <div class="container-fluid">
-            <h1 id="nameCountry">Côte d'Ivoire</h1>
+        <nav class="navbar navbar-light bg-light " style="height: 150px;">
+          <div class="container-fluid d-flex justify-content-between">
+            <div>
+              <h1 id="nameCountry">Côte d'Ivoire</h1>
+              <div class="d-flex">
+                <div>
+                  <h5 class="text-muted mx-4">Cas confirmé</h5>
+                  <span class="text-muted mx-4 nombreCasConfirm">Lorem ipsum...</span>
+                </div>
+                <div>
+                  <h5 class="text-muted mx-4">Patients décédés</h5>
+                  <span class="text-muted mx-4 nombrePatientDece">Lorem ipsum...</span>
+                </div>
+                <div>
+                  <h5 class="text-muted mx-4">Patients guerris</h5>
+                  <span class="text-muted mx-4 nombrePatientGuerrir">Lorem ipsum...</span>
+                </div>
+              </div>
+            </div>
+            
+
             <form class="d-flex" id="searchCovid">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="inputSearchCovid">
+              <select class="form-select" aria-label="Default select example" id="inputSearchCovid" style="width: 200px;">
+                <option selected disabled>Voir d'autre pays</option>
+              </select>
               <button class="btn btn-outline-info" type="submit">Search</button>
             </form>
           </div>
-          <p class="text-muted mx-4">Lorem ipsum...</p>
+          
         </nav>
 
         <div class="row d-flex justify-content-center afficheCas">
@@ -184,68 +204,6 @@
         
       </div>
     </div>
-
-    <!-- Gallery -->
-
-<div class="row mx-5">
-  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
-    />
-
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Wintry Mountain Landscape"
-    />
-  </div>
-
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Mountains in the Clouds"
-    />
-
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
-    />
-  </div>
-
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Waves at Sea"
-    />
-
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Yosemite National Park"
-    />
-  </div>
-</div>
-<!-- Gallery -->
-
-
-
-
-  
-
-
-  
-
-
-
-
-
-
-  
 
     <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
