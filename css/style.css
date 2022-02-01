@@ -49,6 +49,14 @@ ul a{
     display: flex;
     align-items: center;
 }
+.card1{
+    transition: all 0.5s;
+}
+.card1:hover{
+    transform: rotateZ(10deg);
+    transform: scale(0.9);
+    cursor: pointer;
+}
 .card{
     margin: 20px 10px;
 }

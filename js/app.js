@@ -6,7 +6,7 @@ let inputSearchCovid = document.getElementById('inputSearchCovid');
 let nombreCasConfirm = document.querySelector('.nombreCasConfirm');
 let nombrePatientDece = document.querySelector('.nombrePatientDece');
 let nombrePatientGuerrir = document.querySelector('.nombrePatientGuerrir');
-
+let apiKey = '5c11dce65ccad3ca5428202e0c9b89f0';
 
 
 // Recherche
@@ -154,7 +154,13 @@ function stylePrevAndNext(){
 }
 
 
-fetch(`https://api.themoviedb.org/3/search/movie?api_key=7843f8d22a43911f15301ef8d76338ae&query=covid`)
+
+
+
+
+
+
+fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=covid`)
 .then((response) => response.json())
 .then((data) => {
     // console.log(data.results);
@@ -164,7 +170,7 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=7843f8d22a43911f15301ef
 
         // console.log(elements);
         document.querySelector('.galerie').innerHTML += `
-        <div class="card  style="width: 18rem;">
+        <div class="card card1"  style="width: 18rem;" onclick="afficheInfoFilm(${elements.id})">
                 <img src="https://image.tmdb.org/t/p/w500${elements.backdrop_path}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">${elements.title}</h5>
@@ -178,3 +184,22 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=7843f8d22a43911f15301ef
 
 
 
+function afficheInfoFilm(id){
+    console.log(id);
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`)
+    .then((response) => response.json())
+    .then((data) => {
+        
+        document.querySelector('.galeries').innerHTML = `  
+        <div class="height= "200"" >
+            <div class="card">
+                <img class="card-img-top" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="" >
+                <div class="card-body">
+                    <h5 class="card-title">${data.title}</h5>
+                    <p class="card-text">${data.overview}</p>
+                    <p class="card-text"><small class="text-muted">${data.release_date}</small></p>
+                </div>
+            </div>
+        </div>`;
+})
+}

@@ -1,6 +1,5 @@
 /* general */
 .titreRubrique{
-    margin:40px auto 0px auto;
     height: 100px;
     width: 500px;
     display: flex;
@@ -35,13 +34,12 @@ ul a{
     display: flex;
     justify-content: center;
 }
-form{
-    width: 500px;
-}
 
 body{
     background: #d3eef8;
     color: #777;
+    height: 400px;
+    height: 520px;
 }
 
 .titre{
@@ -54,5 +52,8 @@ form{
     width: 400px;
 }
 .bgRDV{
-    margin: 20px 0px;
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
