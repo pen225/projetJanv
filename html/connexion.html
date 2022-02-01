@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../MDB5-STANDARD-UI-KIT-Free-3.10.2/img/mdb-favicon.ico">
-    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../MDB5-STANDARD-UI-KIT-Free-3.10.2/css/mdb.min.css">
+    <link rel="stylesheet" href="../slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/connexion.css">
     <title>Connexion</title>
 </head>
@@ -40,8 +41,44 @@
     </div>
   </nav>
  
+
+<!-- Section prendre rendez-vous -->
+<div class="bgRDV py-lg-5">
+  <div class="container d-flex justify-content-center align-items-center">
+    <div class="row d-flex justify-content-between">
+      <div class="titre col-12 col-md-6">
+        <h1>CLINIQUE SAINT SAUVEUR</h1>
+        <P class="text-capitalize fw-bold">le coeur pour vous ecouter,<br> la compétence pour vous soigner.</P>
+      </div>
+      <div class="formulaire col-12 col-md-6">
+        <form class="d-flex flex-column justify-content-end">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Votre service</label>
+            <select id="service" class="form-select">
+              <option value="generaliste" selected>Généraliste</option>
+              <option value="ophtamologie">Ophtamologie</option>
+              <option value="dermatologie">Dermatologie</option>
+              <option value="chirugie">Chirugie</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Votre mot de passe</label>
+            <input type="password" class="form-control" id="pass" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary">Se connecter</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
     <!-- Prendre rendez-vous -->
-    <div class="titreRubrique bg-info">
+    <!-- <div class="titreRubrique bg-info">
       <h1>Connectez-vous</h1>
     </div>
 
@@ -64,144 +101,146 @@
           <button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
         </div>
       </form>
-    </div>
-    
-<!-- Large modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+    </div> -->
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      ...
+ <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section
+    class="container d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+  >
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Retrouvez votre clinique sur les differents reseaux:</span>
     </div>
-  </div>
-</div>
-   
+    <!-- Left -->
 
-    <!-- Footer -->
-    <footer class="text-center text-white fixed-bottom" style="background-color: #caced1;">
-      <!-- Grid container -->
-      <div class="container p-4">
-        <!-- Section: Images -->
-        <section class="">
-          <div class="row">
-            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-              <div
-                class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                data-ripple-color="light">
-                <img
-                  src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp"
-                  class="w-100"/>
-                <a href="#!">
-                  <div
-                    class="mask"
-                    style="background-color: rgba(251, 251, 251, 0.2);"
-                  ></div>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-              <div
-                class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                data-ripple-color="light"
-              >
-                <img
-                  src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp"
-                  class="w-100"
-                />
-                <a href="#!">
-                  <div
-                    class="mask"
-                    style="background-color: rgba(251, 251, 251, 0.2);"
-                  ></div>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-              <div
-                class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                data-ripple-color="light"
-              >
-                <img
-                  src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp"
-                  class="w-100"
-                />
-                <a href="#!">
-                  <div
-                    class="mask"
-                    style="background-color: rgba(251, 251, 251, 0.2);"
-                  ></div>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-              <div
-                class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                data-ripple-color="light"
-              >
-                <img
-                  src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp"
-                  class="w-100"
-                />
-                <a href="#!">
-                  <div
-                    class="mask"
-                    style="background-color: rgba(251, 251, 251, 0.2);"
-                  ></div>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-              <div
-                class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                data-ripple-color="light"
-              >
-                <img
-                  src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp"
-                  class="w-100"
-                />
-                <a href="#!">
-                  <div
-                    class="mask"
-                    style="background-color: rgba(251, 251, 251, 0.2);"
-                  ></div>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-              <div
-                class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                data-ripple-color="light"
-              >
-                <img
-                  src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp"
-                  class="w-100"
-                />
-                <a href="#!">
-                  <div
-                    class="mask"
-                    style="background-color: rgba(251, 251, 251, 0.2);"
-                  ></div>
-                </a>
-              </div>
-            </div>
+    <div>
+      <a type="" class="text-muted contact" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Conatctez-nous</a>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-        </section>
-        <!-- Section: Images -->
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
       </div>
-      <!-- Grid container -->
-    
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
       </div>
-      <!-- Copyright -->
-    </footer>
+    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../MDB5-STANDARD-UI-KIT-Free-3.10.2/js/mdb.min.js"></script>
-    <script src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
-    <script src="../js/connexion.js"></script>
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Clinique saint Sauveur
+          </h6>
+          <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Liens
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Infos COVID-19</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Rendez-vous</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Galerie</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i> COCODY, NY 10012, CI</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="">Clinique saint Sauveur</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+<script src="../MDB5-STANDARD-UI-KIT-Free-3.10.2/js/mdb.min.js"></script>
+<script src="../slick-1.8.1/slick/slick.min.js"></script>
+<script src="../js/connexion.js"></script>
 </body>
 </html>

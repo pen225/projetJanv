@@ -10,12 +10,7 @@
     color: white;
     border-radius: 10px;
 }
-body{
-    background: url('../images/virtual-health-article-hero-banner-d.jpg');
-}
-/* .titreRubrique h1{
-    
-} */
+
 .navbar{
     height: 100px;
     box-shadow: 0px 0px 4px grey;
@@ -42,4 +37,22 @@ ul a{
 }
 form{
     width: 500px;
+}
+
+body{
+    background: #d3eef8;
+    color: #777;
+}
+
+.titre{
+    width: 400px;
+}
+.titre h1{
+    font-size: 50px;
+}
+form{
+    width: 400px;
+}
+.bgRDV{
+    margin: 20px 0px;
 }

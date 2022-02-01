@@ -63,7 +63,7 @@ sub.addEventListener('submit', (e) =>{
 
 
 let formRdv = document.getElementById('formulaireDeRdv');
-let selectService = document.querySelector('select');
+let selectService = document.getElementById('service');
 let nom = document.getElementById('nom');
 let prenom = document.getElementById('prenom');
 let mail = document.getElementById('mail');
@@ -71,7 +71,7 @@ let tel = document.getElementById('number');
 let address = document.getElementById('address');
 let anniv = document.getElementById('anniv');
 
-// console.log(selectService);
+console.log(selectService);
 
 formRdv.addEventListener('submit', (e) =>{
     e.preventDefault();
@@ -135,10 +135,6 @@ formRdv.addEventListener('submit', (e) =>{
       });
       stylePrevAndNext();
   }
-
-
-
-
 
 function stylePrevAndNext(){
     let previousAll = document.querySelectorAll('.slick-prev');
