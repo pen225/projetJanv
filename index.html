@@ -44,6 +44,7 @@
     </nav>
   </div>
   
+  
   <div class="">
     <!-- Carousel Image de banièrre -->
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -53,7 +54,7 @@
           <div class="carousel-caption d-none d-md-block">
             <p>Bienvenue sur la plateforme en ligne.</p>
             <h1>CLINIQUE SAINT SAUVEUR</h1>
-            <button type="button" class="btn btn-primary">Consultez</button>
+            
           </div>
         </div>
         <div class="carousel-item table-responsive">
@@ -62,7 +63,7 @@
             
             <p>Bienvenue sur la plateforme en ligne.</p>
             <h1>PRENDRE UN RENDEZ-VOUS</h1>
-            <a href="" class="btn btn-primary">Prendre rendez-vous</a>
+            <a href="#rendezVous" class="btn btn-primary">Prendre rendez-vous</a>
             
           </div>
         </div>
@@ -71,7 +72,7 @@
           <div class="carousel-caption d-none d-md-block">
             <p>Bienvenue sur la plateforme en ligne.</p>
             <h1>CONSULTEZ LES INFORMATIONS COVID-19</h1>
-            <button type="button" class="btn btn-primary">Consultez</button>
+            <a href="#infosCovid" class="btn btn-primary">Consultez</a>
           </div>
         </div>
       </div>
@@ -90,12 +91,27 @@
 
 
   <!-- Infos COVID-19 -->
-  <div>
+  <div id="infosCovid">
     <div class="container">
       <div class="p-5 rounded infos">
-        <div class="infoCovid">
-          <div>
+        <div class="infoCovid row">
+          <div class="col-12 col-md-6">
             <h1>Informations Coronavirus</h1>
+          </div>
+          <div class="col-12 col-md-6 contentGlobal" style="width: 500px;">
+            <div>
+              <span><i class="fas fa-globe"></i></span><span class="mondeEntier">Monde entier</span>
+            </div>
+            <div class="d-flex justify-content-around">
+              <div class="d-flex flex-column">
+                <span class="NmbreTotalCas">Nombre total de cas</span>
+                <span id="NmbreTotalCas">382</span>
+              </div>
+              <div class="d-flex flex-column justify-content-between divDeces">
+                <span class="NmbreTotalDeces">Décès</span>
+                <span id="NmbreTotalDeces">5,69</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -139,7 +155,7 @@
   
 
     <!-- Prendre rendez-vous -->
-    <div class="card text-center bg-light ">
+    <div class="card text-center bg-light" id="rendezVous">
       <div class="card-header">
         <h2 class="text-muted">Prendre un rendez-vous</h2>
       </div>
@@ -195,15 +211,17 @@
     
 
     <!-- Galerie -->
-    <h1>Galerie</h1>
-    <div class="titreRubrique col-12 col-sm-6" id="galerie">
-    </div>
-
-    <div class="container contentGalerie">
-      <div class="galerie galeries">
-        
+    
+  
+    <div id="galerie">
+      <h1 class="text-muted text-center">Galerie</h1>
+      <div class="container contentGalerie">
+        <div class="galerie galeries">
+          
+        </div>
       </div>
     </div>
+    
 
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
@@ -230,18 +248,18 @@
           <div class="modal-body">
             <form>
               <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <label for="sendMail" class="col-form-label">E-mail:</label>
+                <input type="email" class="form-control" id="sendMail" placeholder="pen@gmail.com">
               </div>
               <div class="mb-3">
-                <label for="message-text" class="col-form-label">Message:</label>
-                <textarea class="form-control" id="message-text"></textarea>
+                <label for="sendMessage" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="sendMessage"></textarea>
               </div>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Send message</button>
+            <button type="button" class="btn btn-primary" id="sendContact">Send message</button>
           </div>
         </div>
       </div>
@@ -283,11 +301,10 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
+            <i class="fas fa-gem me-3"></i>Clinique saint Sauveur
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+            Une équipe de spécialistes sera à l'écoute de vos besoins et évaluera votre condition sous tous les angles pour élaborer la meilleure prise en charge.
           </p>
         </div>
         <!-- Grid column -->
@@ -333,7 +350,7 @@
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <a class="text-reset fw-bold" href="./index.html">Clinique saint Sauveur</a>
   </div>
   <!-- Copyright -->
 </footer>

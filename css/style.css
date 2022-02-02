@@ -1,6 +1,5 @@
 
 .navbar{
-    height: 100px;
     box-shadow: 0px 0px 4px grey;
 }
 .navbar-brand{
@@ -12,12 +11,12 @@ ul li{
 ul a{
     font-size: 20px;
 }
-.carousel-inner{
+/* .carousel-inner{
     height: 500px;
 }
 .carousel-inner img{
     height: 500px;
-}
+} */
 .carousel-caption h1{
     font-size: 50px;
     text-shadow: 1px 1px 3px #777;
@@ -28,7 +27,7 @@ ul a{
 }
 .carousel-caption{
     margin-bottom: 100px;
-    background: rgba(255, 255, 255, 0.342);
+    background: #ffffff57;
     border-radius: 10px;
     box-shadow: Opx 0px 4px #777;
 }
@@ -87,12 +86,53 @@ ul a{
     background-size: cover;
     margin-bottom: 10px;
     display: flex;
+    justify-content: space-center;
     align-items: center;
     border-radius: 5px;
 }
 .infoCovid h1{
     color: white;
-    width: 200px;
-    margin-left: 20px;
     font-size: 50px;
+}
+.infoCovid .fas{
+    color: white;
+    font-size: 25px;
+    text-shadow: 0px 0px 3px black;
+}
+.mondeEntier{
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: 300;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+}
+.NmbreTotalCas{
+    color: white;
+    font-size: 18px;
+    text-shadow: 0px 0px 3px black;
+}
+#NmbreTotalCas{
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+}
+.NmbreTotalDeces{
+    color: white;
+    font-size: 18px;
+    text-shadow: 0px 0px 3px black;
+}
+#NmbreTotalDeces{
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+}
+.contentGlobal{
+    border-top: 1px solid white;
+    padding-top: 10px;
+}
+.divDeces{
+    border-left: 1px solid white;
+    padding-left: 10px;
 }

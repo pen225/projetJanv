@@ -14,6 +14,13 @@ fetch("https://api.covid19api.com/summary")
     .then((response) => response.json())
     .then((data) => {
     let country = data.Countries;
+    console.log(data.Global);
+
+
+    document.getElementById('NmbreTotalCas').innerHTML = `${data.Global.TotalConfirmed} `;      
+    document.getElementById('NmbreTotalDeces').innerHTML = `${data.Global.TotalDeaths} `;      
+    
+    
     
     for (let i = 0; i < country.length; i++) {
         const element = country[i];
@@ -125,7 +132,43 @@ formRdv.addEventListener('submit', (e) =>{
         }
     }
     
+    nom.value ="";
+    prenom.value ="";
+    mail.value ="";
+    tel.value ="";
+    address.value ="";
+    anniv.value ="";
 })
+
+//-------- Message de contact ---------//
+let sendMail = document.getElementById('sendMail');
+let sendMessage = document.getElementById('sendMessage');
+let formContact = document.getElementById('sendContact');
+
+formContact.addEventListener('click', (e) =>{
+    const usr = {
+        Mail: sendMail.value,
+        Message: sendMessage.value
+    }
+    console.log(usr);
+    let sugesstion = JSON.parse(localStorage.getItem("user"));
+
+    if (sugesstion) {
+        sugesstion.push(usr);
+        localStorage.setItem("user", JSON.stringify(sugesstion));
+    }else{
+        sugesstion = [];
+        sugesstion.push(usr);
+        localStorage.setItem("user", JSON.stringify(sugesstion));
+    }
+    sendMail.value = "";
+    sendMessage.value ="";
+})
+
+
+
+
+
 
 // Slicke carousel
   function chargeplay (){
