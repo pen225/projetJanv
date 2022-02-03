@@ -93,8 +93,22 @@ formRdv.addEventListener('submit', (e) =>{
     if (selectService.value == 'generaliste') {
         let patientsGeneral = JSON.parse(localStorage.getItem("patientGeneral"));
         if (patientsGeneral) {
-            patientsGeneral.push(patient);
-            localStorage.setItem("patientGeneral",JSON.stringify(patientsGeneral));
+            for (const element of patientsGeneral) {
+                    if (mail.value == element.mail || tel.value == element.telephone) {
+                        alert('Numero de telephone ou mail existe déja')
+                        
+                    }else{
+                        patientsGeneral.push(patient);
+                        localStorage.setItem("patientGeneral",JSON.stringify(patientsGeneral));
+                    }
+
+                    break;
+            }
+
+
+
+
+            
         }else{
             patientsGeneral = [];
             patientsGeneral.push(patient);
@@ -232,18 +246,8 @@ function afficheInfoFilm(id){
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`)
     .then((response) => response.json())
     .then((data) => {
-        
-        document.querySelector('.galeries').innerHTML = `  
-        <div class="height= "200"" >
-            <div class="card">
-                <img class="card-img-top" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="" >
-                <div class="card-body">
-                    <h5 class="card-title">${data.title}</h5>
-                    <p class="card-text">${data.overview}</p>
-                    <p class="card-text"><small class="text-muted">${data.release_date}</small></p>
-                </div>
-            </div>
-        </div>`;
+        console.log(data.homepage);
+        location.assign(data.homepage)
 })
 }
 
