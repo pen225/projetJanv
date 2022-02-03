@@ -1,6 +1,13 @@
 
 .navbar{
-    box-shadow: 0px 0px 4px grey;
+   display: none;
+   opacity: 0;
+   transition: all 1s;
+}
+
+.afficheNavbar{
+    display: block;
+    opacity: 1;
 }
 .navbar-brand{
     margin-right: 100px;
@@ -11,12 +18,10 @@ ul li{
 ul a{
     font-size: 20px;
 }
-/* .carousel-inner{
+
+/* .carousel-inner img{
     height: 500px;
-}
-.carousel-inner img{
-    height: 500px;
-} */
+}  */
 .carousel-caption h1{
     font-size: 50px;
     text-shadow: 1px 1px 3px #777;

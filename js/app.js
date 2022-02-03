@@ -246,3 +246,12 @@ function afficheInfoFilm(id){
         </div>`;
 })
 }
+
+//------------- Document scroll --------------//
+window.document.addEventListener('scroll', () =>{
+    if (window.scrollY > 100) {
+        document.querySelector('.navbar').classList.add('afficheNavbar');
+    }else{
+        document.querySelector('.navbar').classList.remove('afficheNavbar');
+    }
+})
