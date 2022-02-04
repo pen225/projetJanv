@@ -11,6 +11,9 @@ for (let i = 0; i < infoGeneral.length; i++) {
     <td>${element.nom}</td>
     <td>${element.prenom}</td>
     <td>${element.telephone}</td>
+    <td>${element.mail}</td>
+    <td>${element.address}</td>
+    <td>${element.anniversaire}</td>
     </tr>
     `;
 }
@@ -65,9 +68,9 @@ const modifier = (index) =>{
             <label for="service" class="form-label">Choisir un service</label>
             <select id="service" class="form-select">
               <option value="generaliste" selected>Généraliste</option>
-              <option value="ophtamologie">Ophtamologie</option>
-              <option value="dermatologie">Dermatologie</option>
-              <option value="chirugie">Chirugie</option>
+              <option value="ophtamologie" disabled>Ophtamologie</option>
+              <option value="dermatologie" disabled>Dermatologie</option>
+              <option value="chirugie" disabled>Chirugie</option>
             </select>
           </div>
           <div class="col-12">

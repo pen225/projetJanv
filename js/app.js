@@ -104,31 +104,50 @@ formRdv.addEventListener('submit', (e) =>{
 
                     break;
             }
-
-
-
-
-            
+   
         }else{
             patientsGeneral = [];
             patientsGeneral.push(patient);
             localStorage.setItem("patientGeneral",JSON.stringify(patientsGeneral));
         }
     }else if(selectService.value == 'ophtamologie') {
+
         let patientsOphtamologie = JSON.parse(localStorage.getItem("patientOphtamologie"));
         if (patientsOphtamologie) {
-            patientsOphtamologie.push(patient);
-            localStorage.setItem("patientOphtamologie",JSON.stringify(patientsOphtamologie));
+            for (const element of patientsOphtamologie) {
+                if (mail.value == element.mail || tel.value == element.telephone) {
+                    alert('Numero de telephone ou mail existe déja')
+                    
+                }else{
+                    patientsOphtamologie.push(patient);
+                    localStorage.setItem("patientOphtamologie",JSON.stringify(patientsOphtamologie));
+                }
+
+                break;
+            }
+           
         }else{
             patientsOphtamologie = [];
             patientsOphtamologie.push(patient);
             localStorage.setItem("patientOphtamologie",JSON.stringify(patientsOphtamologie));
         }
+
     }else if (selectService.value == 'dermatologie') {
         let patientsDermatologie = JSON.parse(localStorage.getItem("patientDermatologie"));
         if (patientsDermatologie) {
-            patientsDermatologie.push(patient);
-            localStorage.setItem("patientDermatologie",JSON.stringify(patientsDermatologie));
+
+            for (const element of patientsDermatologie) {
+                if (mail.value == element.mail || tel.value == element.telephone) {
+                    alert('Numero de telephone ou mail existe déja')
+                    
+                }else{
+                    patientsDermatologie.push(patient);
+                    localStorage.setItem("patientDermatologie",JSON.stringify(patientsDermatologie));
+                }
+
+                break;
+            }
+            
         }else{
             patientsDermatologie = [];
             patientsDermatologie.push(patient);
@@ -137,8 +156,17 @@ formRdv.addEventListener('submit', (e) =>{
     }else if (selectService.value == 'chirugie') {
         let patientsChirugie = JSON.parse(localStorage.getItem("patientChirugie"));
         if (patientsChirugie) {
-            patientsChirugie.push(patient);
-            localStorage.setItem("patientChirugie",JSON.stringify(patientsChirugie));
+            for (const element of patientsChirugie) {
+                if (mail.value == element.mail || tel.value == element.telephone) {
+                    alert('Numero de telephone ou mail existe déja')
+                    
+                }else{
+                    patientsChirugie.push(patient);
+                    localStorage.setItem("patientChirugie",JSON.stringify(patientsChirugie));
+                }
+
+                break;
+            }
         }else{
             patientsChirugie = [];
             patientsChirugie.push(patient);

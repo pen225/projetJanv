@@ -4,6 +4,8 @@
     background: cadetblue;
     color: rgb(238, 238, 238);
     border-radius: 4px;
+    padding: 20px 0px;
+    margin-top: 10px;
 }
 .far{
     color: cadetblue;
