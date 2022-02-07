@@ -62,13 +62,6 @@ sub.addEventListener('submit', (e) =>{
 // Fin patie
 
 
-
-
-
-
-
-
-
 let formRdv = document.getElementById('formulaireDeRdv');
 let selectService = document.getElementById('service');
 let nom = document.getElementById('nom');
@@ -77,6 +70,7 @@ let mail = document.getElementById('mail');
 let tel = document.getElementById('number');
 let address = document.getElementById('address');
 let anniv = document.getElementById('anniv');
+let textRdv = document.getElementById('textRdv');
 
 console.log(selectService);
 
@@ -95,8 +89,9 @@ formRdv.addEventListener('submit', (e) =>{
         if (patientsGeneral) {
             for (const element of patientsGeneral) {
                     if (mail.value == element.mail || tel.value == element.telephone) {
-                        alert('Numero de telephone ou mail existe déja')
-                        
+                        // alert('Numero de telephone ou mail existe déja')
+                        textRdv.innerHTML=`Numero de telephone ou mail existe!`;
+                        textRdv.style.color="red";                
                     }else{
                         patientsGeneral.push(patient);
                         localStorage.setItem("patientGeneral",JSON.stringify(patientsGeneral));
@@ -109,6 +104,9 @@ formRdv.addEventListener('submit', (e) =>{
             patientsGeneral = [];
             patientsGeneral.push(patient);
             localStorage.setItem("patientGeneral",JSON.stringify(patientsGeneral));
+
+            textRdv.innerHTML=`Bienvenue Mr/Mme ${nom.value}`;
+            textRdv.style.color="green";
         }
     }else if(selectService.value == 'ophtamologie') {
 
@@ -116,7 +114,8 @@ formRdv.addEventListener('submit', (e) =>{
         if (patientsOphtamologie) {
             for (const element of patientsOphtamologie) {
                 if (mail.value == element.mail || tel.value == element.telephone) {
-                    alert('Numero de telephone ou mail existe déja')
+                    textRdv.innerHTML=`Numero de telephone ou mail existe!`;
+                    textRdv.style.color="red";
                     
                 }else{
                     patientsOphtamologie.push(patient);
@@ -130,6 +129,9 @@ formRdv.addEventListener('submit', (e) =>{
             patientsOphtamologie = [];
             patientsOphtamologie.push(patient);
             localStorage.setItem("patientOphtamologie",JSON.stringify(patientsOphtamologie));
+
+            textRdv.innerHTML=`Bienvenue Mr/Mme ${nom.value}`;
+            textRdv.style.color="green";
         }
 
     }else if (selectService.value == 'dermatologie') {
@@ -138,27 +140,34 @@ formRdv.addEventListener('submit', (e) =>{
 
             for (const element of patientsDermatologie) {
                 if (mail.value == element.mail || tel.value == element.telephone) {
-                    alert('Numero de telephone ou mail existe déja')
+                    textRdv.innerHTML=`Numero de telephone ou mail existe!`;
+                    textRdv.style.color="red";
                     
                 }else{
+                    
                     patientsDermatologie.push(patient);
                     localStorage.setItem("patientDermatologie",JSON.stringify(patientsDermatologie));
                 }
 
                 break;
+                
             }
             
         }else{
             patientsDermatologie = [];
             patientsDermatologie.push(patient);
             localStorage.setItem("patientDermatologie",JSON.stringify(patientsDermatologie));
+
+            textRdv.innerHTML=`Bienvenue Mr/Mme ${nom.value}`;
+            textRdv.style.color="green";
         }
     }else if (selectService.value == 'chirugie') {
         let patientsChirugie = JSON.parse(localStorage.getItem("patientChirugie"));
         if (patientsChirugie) {
             for (const element of patientsChirugie) {
                 if (mail.value == element.mail || tel.value == element.telephone) {
-                    alert('Numero de telephone ou mail existe déja')
+                    textRdv.innerHTML=`Numero de telephone ou mail existe!`;
+                    textRdv.style.color="red";
                     
                 }else{
                     patientsChirugie.push(patient);
@@ -171,8 +180,12 @@ formRdv.addEventListener('submit', (e) =>{
             patientsChirugie = [];
             patientsChirugie.push(patient);
             localStorage.setItem("patientChirugie",JSON.stringify(patientsChirugie));
+
+            textRdv.innerHTML=`Bienvenue Mr/Mme ${nom.value}`;
+            textRdv.style.color="green";
         }
     }
+    
     
     nom.value ="";
     prenom.value ="";
@@ -237,11 +250,6 @@ function stylePrevAndNext(){
         element.innerHTML = `<i class="fas fa-arrow-circle-right"></i>`
     }
 }
-
-
-
-
-
 
 
 
